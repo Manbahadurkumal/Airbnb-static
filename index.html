@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="airbnb.css">
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(<React.Fragment>
+            <div className="container">
+            <div className="header"><Header/></div>
+            <div className="intro"><Intro/></div>
+            <div className="event d-flex justify-content-between">
+                
+                <Event 
+                imgsrc="image12.png"
+                rating="5.0"
+                viewers="(6)"
+                discription="Life lessons with Katie Zaferes"
+                price="$136"/>
+                
+                <Event
+                imgsrc="wedding-photography 1.png"
+                rating="5.0"
+                viewers="(30)"
+                discription="Learn wedding photography"
+                price="$125"/>
+                <Event
+                imgsrc="mountain-bike.png"
+                rating="4.8"
+                viewers="(2)"
+                discription="Group Mountain Bikin"
+                price="$50"/>
+                </div>
+            </div>
+            </React.Fragment>, document.querySelector("#root"));
+        function Header(){
+            return(<div className="logo py-4 ps-3">
+                <img src="./image/airbnb 1.png" alt=""/>
+            </div>);
+        }
+        function Intro(){
+            return (<React.Fragment>
+                <img className="img-fluid p-md-5" src="image/Group 77.png" alt=""/>
+                <h2 className="topic">Online Experiences</h2>
+                <p className="explaination w-md-50">Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.</p>
+                </React.Fragment>);
+        }
+        function Event(props){
+            console.log(props);
+            return (<div className="box">
+                <div><img className="fleximage " src={props.imgsrc} alt=""/></div>
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    {props.rating}
+                    {props.viewers}
+                    .USA
+                </div>
+                <div>{props.discription}</div>
+                <div className="d-flex"><h5>From{props.price}</h5><p>/person</p></div>
+            </div>);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f77c200e6e.js" crossorigin="anonymous"></script>
+</body>
+</html>
