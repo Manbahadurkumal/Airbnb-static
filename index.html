@@ -22,7 +22,7 @@
             <div className="container">
             <div className="header"><Header/></div>
             <div className="intro"><Intro/></div>
-            <div className="event d-flex justify-content-between">
+            <div className="event d-md-flex justify-content-between">
                 
                 <Event 
                 imgsrc="image12.png"
@@ -61,7 +61,7 @@
         function Event(props){
             console.log(props);
             return (<div className="box">
-                <div><img className="fleximage " src={props.imgsrc} alt=""/></div>
+                <div><img className="fleximage img-fluid" src={props.imgsrc} alt=""/></div>
                 <div>
                     <i class="fa-solid fa-star"></i>
                     {props.rating}
